@@ -1,0 +1,215 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.5)  14 APR 2022 13:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Exdoc.tex
+(./Exdoc.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(e:/texlive/2022/texmf-dist/tex/latex/elsarticle/elsarticle.cls
+Document Class: elsarticle 2020/11/20, 3.3: Elsevier Ltd
+(e:/texlive/2022/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-02-24 L3 programming layer (loader) 
+
+(e:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
+
+(|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count181
+\l__color_backend_stack_int=\count182
+\g__color_backend_stack_int=\count183
+\g__graphics_track_int=\count184
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count185
+\g__pdf_backend_annotation_int=\count186
+\g__pdf_backend_link_int=\count187
+))
+(e:/texlive/2022/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+(e:/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count188
+)
+\@bls=\dimen138
+
+(e:/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(e:/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count189
+\c@section=\count190
+\c@subsection=\count191
+\c@subsubsection=\count192
+\c@paragraph=\count193
+\c@subparagraph=\count194
+\c@figure=\count195
+\c@table=\count196
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen139
+)
+(e:/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(e:/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(e:/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+
+(e:/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(e:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(e:/texlive/2022/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+)
+\c@tnote=\count197
+\c@fnote=\count198
+\c@cnote=\count199
+\c@ead=\count266
+\c@author=\count267
+\@eadauthor=\toks17
+\c@affn=\count268
+\absbox=\box51
+\elsarticlehighlightsbox=\box52
+\elsarticlegrabsbox=\box53
+\keybox=\box54
+\Columnwidth=\dimen142
+\space@left=\dimen143
+\els@boxa=\box55
+\els@boxb=\box56
+\leftMargin=\dimen144
+\@enLab=\toks18
+\@sep=\skip49
+\@@sep=\skip50
+ (./Exdoc.spl)
+(e:/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip51
+\bibsep=\skip52
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count269
+)
+\splwrite=\write3
+\openout3 = `Exdoc.spl'.
+
+\appnamewidth=\dimen145
+)
+(e:/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(e:/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(e:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip53
+\subfigcapskip=\skip54
+\subfigcaptopadj=\dimen146
+\subfigbottomskip=\skip55
+\subfigcapmargin=\dimen147
+\subfiglabelskip=\skip56
+\c@subfigure=\count270
+\c@lofdepth=\count271
+\c@subtable=\count272
+\c@lotdepth=\count273
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(e:/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip57
+\subfig@bottom=\skip58
+) (./Exdoc.aux)
+\openout1 = `Exdoc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
+2.
+
+(e:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+ [1
+
+] [2
+
+]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
+.
+
+(e:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
+.
+
+(e:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (192.05026pt too wide) in alignment at lines 141--166
+ [][][] []
+ []
+
+
+Overfull \hbox (2.608pt too wide) has occurred while \output is active
+[] 
+ []
+
+[1
+
+
+]
+File: figure_3.png Graphic file (type bmp)
+<figure_3.png>
+File: figure_4.png Graphic file (type bmp)
+<figure_4.png>
+File: figure_5.png Graphic file (type bmp)
+<figure_5.png>
+
+
+LaTeX Warning: Float too large for page by 35.79999pt on input line 181.
+
+[2] [3] (./Exdoc.aux) ) 
+Here is how much of TeX's memory you used:
+ 2849 strings out of 476179
+ 42772 string characters out of 5813073
+ 344616 words of memory out of 5000000
+ 23579 multiletter control sequences out of 15000+600000
+ 475667 words of font info for 62 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 70i,8n,76p,288b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on Exdoc.pdf (5 pages).
