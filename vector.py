@@ -11,6 +11,6 @@ class Vector:
         return iter(self._components)
     def __add__(self, other):
         pairs = itertools.zip_longest(self, other, fillvalue=0.0)
-        return 
+        return Vector(*[a +b for a, b in pairs])
 y = Vector(1,2)
 print(y.dim)
