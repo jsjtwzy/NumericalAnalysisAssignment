@@ -64,10 +64,9 @@ class Vector:
                 for j in range(3):
                     for k in range(3):
                         y[i] += epsilon(i, j, k) *selfIn[j] *otherIn[k]
-            print(y)
             return Vector(*y)
         else:
             return NotImplemented
 
-y = Vector.crossmul(-Vector(1, 2), Vector(1, 3))
+y = Vector.crossmul(-Vector(1, 2), Vector(1, 2, 3)) @Vector(1, 2)
 print(y)
