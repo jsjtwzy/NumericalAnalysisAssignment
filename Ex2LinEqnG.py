@@ -3,7 +3,7 @@ import numpy as np
 def main():
     # 输入系数矩阵
     A = np.array(((-0.002, 2, 2), (1, 0.78125, 0), (3.996, 5.5625, 4)))
-    b = np.array([0.4, 1.3816, 7.4178])
+    b = np.array((0.4, 1.3816, 7.4178))
     n = np.shape(A)[0]
     P = np.eye(n)
     # Gauss消元

@@ -2,7 +2,7 @@ import sympy as sp
 import numpy as np
 
 def Lagy(f, x):
-    y = np.array([f(xi) for xi in x])
+    y = np.array(tuple(f(xi) for xi in x))
     return y
 
 def f(x):

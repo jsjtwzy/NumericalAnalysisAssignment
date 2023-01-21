@@ -3,7 +3,7 @@ import numpy as np
 
 def Lagy(f):
     """求函数值数列"""
-    return lambda x:np.array([f(xi) for xi in x])
+    return lambda x:np.array(tuple(f(xi) for xi in x))
 
 def f(x):
     return 1 /(1 +9 *x**2)

@@ -6,7 +6,7 @@ def poly(xvar, xarray):
         res *= (xvar -xai)
     return res
 def main():
-    y5 = np.array([1,6,15])
+    y5 = np.array((1,6,15))
     x5 = np.linspace(0,2,len(y5))
     x = sp.symbols('x')
     num1, dem1, lag5 = [], [], []

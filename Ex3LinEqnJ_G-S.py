@@ -10,8 +10,8 @@ def split(A):
     Res = [L, D, U]
     return Res
 def main():
-    A = np.array([[10, -1,0],[-1, 10, -2],[0, -2, 10]])
-    b = np.array([[9],[7],[6]])
+    A = np.array(((10, -1,0),(-1, 10, -2),(0, -2, 10)))
+    b = np.array((9,7,6))
     n = np.shape(A)[0]
     L = np.array(split(A)[0])
     D = np.array(split(A)[1])
