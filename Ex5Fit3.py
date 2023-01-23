@@ -35,15 +35,15 @@ def Fit():
         for j in range(i):
             eqns.append(innerp(phi(j),phi(i)))
     ##求解系数
-    res = [list(sp.solve(eqns[int((i**2 +i)/2):int((i**2 +3 *i +2)/2)], a[:i +1], dict=True)[0].values())\
-        +[1] +(n -1 -i) *[0] for i in range(n)]
+    res = (list(sp.solve(eqns[int((i**2 +i)/2):int((i**2 +3 *i +2)/2)], a[:i +1], dict=True)[0].values())\
+        +[1] +(n -1 -i) *[0] for i in range(n))
     ##正交多项式组系数矩阵
-    A = np.array([[1,0,0,0], *res])
-    xp = np.array([1,x,x**2,x**3])
+    A = np.array(([1,0,0,0], *res))
+    xp = np.array((1,x,x**2,x**3))
     Phi = np.matmul(A,xp)
     ##待定系数求拟合多项式
-    xserial = np.array([0,0.1,0.2,0.3,0.5,0.8,1])
-    yserial = np.array([1,0.41,0.50,0.61,0.91,2.02,2.46])
+    xserial = np.array((0,0.1,0.2,0.3,0.5,0.8,1))
+    yserial = np.array((1,0.41,0.50,0.61,0.91,2.02,2.46))
     Phik = np.zeros((n+1,7))
     for i in range(n +1):
         Phik[i] = np.array([Phi[i].evalf(subs ={x:xj}) 
