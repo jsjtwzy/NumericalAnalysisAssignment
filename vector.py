@@ -9,6 +9,12 @@ def epsilon(i,j,k):
         return -1
     else:
         return 0
+    
+def delta(i, j):
+    if i==j:
+        return 1
+    else:
+        return 0
 class Vector:
     def __init__(self, *components):
         dim = len(components)
@@ -54,19 +60,24 @@ class Vector:
         return sum(a *b for a, b in pairs)
     def __rmatmul__(self, other):
         return self @other
+    
     @classmethod
-    def crossmul(cls, self, other):
-        if self.dim <=3 and other.dim <=3:
-            selfIn = self +Vector(0, 0, 0)
-            otherIn = other +Vector(0, 0, 0)
+    def crossmul(cls, a, b):
+        if a.dim <=3 and b.dim <=3:
+            aIn = a +Vector(0, 0, 0)
+            bIn = b +Vector(0, 0, 0)
             y = [0, 0, 0]
             for i in range(3):
                 for j in range(3):
                     for k in range(3):
-                        y[i] += epsilon(i, j, k) *selfIn[j] *otherIn[k]
+                        y[i] += epsilon(i, j, k) *aIn[j] *bIn[k]
             return Vector(*y)
         else:
             return NotImplemented
+    
+    @classmethod
+    def cartianmul(cls, a, b):
+        return Vector(*itertools.product(a, b))
 
-y = Vector.crossmul(-Vector(1, 2), Vector(1, 2, 3)) @Vector(1, 2)
+y = Vector.cartianmul(-Vector(1, 2), Vector(1, 2, 3))
 print(y)
