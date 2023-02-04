@@ -2,24 +2,26 @@ import itertools
 import numbers
 import math
 
-def epsilon(i,j,k):
-    if (j -i) *(k -j) *(i -k) == -2:
-        return 1
-    elif (j -i) *(k -j) *(i -k) == 2:
-        return -1
-    else:
-        return 0
-    
-def delta(i, j):
-    if i==j:
-        return 1
-    else:
-        return 0
 class Vector:
     def __init__(self, *components):
-        dim = len(components)
-        self._dim = dim
+        self._dim = len(components)
         self._components = components
+    
+    @staticmethod
+    def epsilon(i,j,k):
+        if (j -i) *(k -j) *(i -k) == -2:
+            return 1
+        elif (j -i) *(k -j) *(i -k) == 2:
+            return -1
+        else:
+            return 0
+
+    @staticmethod    
+    def delta(i, j):
+        if i==j:
+            return 1
+        else:
+            return 0
     
     @property
     def dim(self):
@@ -63,14 +65,14 @@ class Vector:
     
     @classmethod
     def crossmul(cls, a, b):
-        if a.dim <=3 and b.dim <=3:
+        if a._dim <=3 and b._dim <=3:
             aIn = a +Vector(0, 0, 0)
             bIn = b +Vector(0, 0, 0)
             y = [0, 0, 0]
             for i in range(3):
                 for j in range(3):
                     for k in range(3):
-                        y[i] += epsilon(i, j, k) *aIn[j] *bIn[k]
+                        y[i] += Vector.epsilon(i, j, k) *aIn[j] *bIn[k]
             return Vector(*y)
         else:
             return NotImplemented
