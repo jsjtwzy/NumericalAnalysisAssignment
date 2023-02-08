@@ -1,9 +1,7 @@
 import sympy as sp
 import numpy as np
 
-def Lagy(f, x):
-    y = np.array(tuple(f(xi) for xi in x))
-    return y
+from Ex4Lag import Lagy
 
 def f(x):
     return 1 /(1 +9 *x**2)
@@ -16,8 +14,9 @@ def poly(xvar,xarray):
 
 n = 3
 def Her():
+    lagyvalue = Lagy(f)
     xh = np.linspace(0,10,n+1)
-    yh = Lagy(f, xh)
+    yh = lagyvalue(xh)
     x = sp.symbols('x')
     f2 = sp.diff(f(x),x)
     dyh, num, dem, lag, dlag, her, bher, wher = \
