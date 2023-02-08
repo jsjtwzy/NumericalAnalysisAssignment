@@ -6,22 +6,19 @@ import Ex4Her, Ex4Lag, Ex4Sam
 def f(x):
     return 1 /(1 +9 *x**2)
 
-def f1(x1):
-    return eval(Ex4Lag.Lag()[0])
+def f1(x):
+    return eval(Ex4Lag.Lag()[0].replace('x1','x'))
 
-def f2(x2):
-    return eval(Ex4Lag.Lag()[1])
+def f2(x):
+    return eval(Ex4Lag.Lag()[1].replace('x2','x'))
 
 def fh(x):
     return eval(Ex4Her.Her())
 
 def s(x):
     slist = eval(Ex4Sam.Sam())
-    cond = [[True if (i>=0 and i<2) else False for i in x]]
-    cond.append([True if (i>=2 and i<4) else False for i in x])
-    cond.append([True if (i>=4 and i<6) else False for i in x])
-    cond.append([True if (i>=6 and i<8) else False for i in x])
-    cond.append([True if (i>=8 and i<=10) else False for i in x])
+    cond = [[True if (i>=2 *n and i<2 *n +2) else False for i in x]\
+        for n in range(5)]
     res = sum([cond[i] *slist[i] for i in range(len(cond))])
     return res
 

@@ -1,10 +1,11 @@
 import sympy as sp
 import numpy as np
+
 import functools as ft
+
 from Clock import clock
 
-def f(x):
-    return 1 /(1 +9 *x**2)
+from Ex4Lag import f
 
 @ft.lru_cache()
 def diffquol(f):
@@ -26,7 +27,6 @@ def diffquon(*x):
         return (diffquon(*xcut[:-1]) -diffquon(*xcut[:-2], x[-1])) /(xcut[-2] -xcut[-1])
 
 n = 5
-@clock
 def Sam():
     mu = 0.5
     lam = 1 -mu
@@ -34,7 +34,7 @@ def Sam():
     A = 2 *np.eye(n-1)
     d = np.ones(n-1)
     for i in range(n-1):
-        d[i] = 6 *diffquon(xs[i], xs[i+1], xs[i+2])
+        d[i] = diffquon(xs[i], xs[i+1], xs[i+2])
         if i == 0:
             A[i][i+1] = lam
         elif i == n-2:
@@ -42,7 +42,7 @@ def Sam():
         else:
             A[i][i+1] = lam
             A[i][i-1] = mu
-    M = np.linalg.solve(A, d)
+    M = np.linalg.solve(A, 6 *d)
     M = np.array([0]+list(M)+[0])
     x = sp.symbols('x')
     global s
@@ -52,8 +52,7 @@ def Sam():
         p3 = ((xs[i+1] -x)**3 *M[i] +(x -xs[i])**3 *M[i+1]) /6 /hip1
         ai = (f(xs[i+1]) -f(xs[i]) -hip1**2 /6 *(M[i+1] -M[i])) /hip1
         bi = f(xs[i]) -hip1**2 *M[i] /6
-        si = p3 +(x -xs[i]) *ai +bi
-        si = sp.expand(si)
+        si = sp.expand(p3 +(x -xs[i]) *ai +bi)
         s.append(si)
     return str(s)
 

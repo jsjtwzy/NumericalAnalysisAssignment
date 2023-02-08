@@ -1,16 +1,7 @@
 import sympy as sp
 import numpy as np
 
-from Ex4Lag import Lagy
-
-def f(x):
-    return 1 /(1 +9 *x**2)
-
-def poly(xvar,xarray):
-    res = 1
-    for xai in xarray:
-        res *= (xvar -xai)
-    return res
+from Ex4Lag import Lagy, f, poly
 
 n = 3
 def Her():
@@ -19,13 +10,12 @@ def Her():
     yh = lagyvalue(xh)
     x = sp.symbols('x')
     f2 = sp.diff(f(x),x)
-    dyh, num, dem, lag, dlag, her, bher, wher = \
-        [], [], [], [], [], [], [], []
+    dyh, num, lag, dlag, her, bher, wher = \
+        [], [], [], [], [], [], []
     for i in range(len(xh)):
-        dyh.append(f2.evalf(subs = {x:xh[i]}))
+        dyh.append(f2.subs({x:xh[i]}))
         num.append(poly(x, xh)/(x -xh[i]))
-        dem.append(num[i].evalf(subs = {x:xh[i]}))
-        lag.append(num[i] /dem[i])
+        lag.append(num[i] /num[i].subs({x:xh[i]}))
         dlag.append(sp.diff(lag[i],x))
         her.append((1 -(x -xh[i])*2*dlag[i]) *lag[i] *lag[i])
         bher.append((x -xh[i]) *lag[i] *lag[i])
