@@ -16,7 +16,7 @@ def diffquon(*x):
     """n阶差商"""
     xcut = list(set(x))
     a = sp.symbols('a')
-    df = lambda x1: sp.diff(f(a), a).evalf(subs={a:x1})
+    df = lambda x1: sp.diff(f(a), a).subs({a:x1})
     if len(xcut) <3:
         try:
             return diffquol(f)(*xcut)

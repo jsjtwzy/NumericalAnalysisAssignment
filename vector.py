@@ -3,6 +3,7 @@ import numbers
 import math
 
 class Vector:
+    '''Defined a Vector class supports operants.'''
     def __init__(self, *components):
         self._dim = len(components)
         self._components = components
@@ -26,6 +27,7 @@ class Vector:
     @property
     def dim(self):
         return self._dim
+    
     def __iter__(self):
         return iter(self._components)
     def __getitem__(self, index):

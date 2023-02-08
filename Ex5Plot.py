@@ -4,10 +4,9 @@ from Clock import clock
 import Ex5Fit, Ex5Fit3
 
 def f1(x):
-    return eval(Ex5Fit.Fit())
-
+    return eval(Ex5Fit.cal())
 def f2(x):
-    return eval(Ex5Fit3.Fit())
+    return eval(Ex5Fit3.cal())
 
 @clock
 def main():
