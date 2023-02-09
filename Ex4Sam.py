@@ -43,7 +43,7 @@ def Sam():
             A[i][i+1] = lam
             A[i][i-1] = mu
     M = np.linalg.solve(A, 6 *d)
-    M = np.array([0]+list(M)+[0])
+    M = np.hstack((0, M, 0))
     x = sp.symbols('x')
     global s
     s = []

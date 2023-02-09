@@ -11,8 +11,8 @@ def main():
         for i in range(j, n):
             # 选取列主元
             if abs(A[j][j])<abs(A[i][j]):
-                c = np.copy(b[j])
-                d = np.copy(A[j])
+                c = b[j].copy()
+                d = A[j].copy()
                 b[j], b[i], A[j], A[i] = b[i], c, A[i], d
         # 消元
         for i in range(j +1, n):
