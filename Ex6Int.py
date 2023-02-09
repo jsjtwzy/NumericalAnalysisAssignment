@@ -5,7 +5,7 @@ def f(x):
     return res
 ##定义2^k等分矩形公式
 def T0(k, T):
-    h = (ab[1] -ab[0]) /2**k
+    h = abs(ab[1] -ab[0]) /2**k
     yvalue = [f(ab[0] +(2 *i -1) *h) 
               for i in range(1, 2**(k -1) +1)]
     sres = sum(yvalue)
