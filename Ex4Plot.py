@@ -7,13 +7,13 @@ def f(x):
     return 1 /(1 +9 *x**2)
 
 def f1(x):
-    return eval(Ex4Lag.Lag()[0].replace('x1','x'))
+    return eval(Ex4Lag.Lag(5)[0])
 
 def f2(x):
-    return eval(Ex4Lag.Lag()[1].replace('x2','x'))
+    return eval(Ex4Lag.Lag(10)[0])
 
 def fh(x):
-    return eval(Ex4Her.Her())
+    return eval(Ex4Her.Her(3)[0])
 
 def s(x):
     slist = eval(Ex4Sam.Sam())

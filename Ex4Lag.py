@@ -17,29 +17,21 @@ def poly(xvar, xarray):
 
 n1 = 5
 n2  = 10
-def Lag():
+def Lag(n):
     lagyvalue = Lagy(f)
-    x5 = np.linspace(0,10,n1+1)
-    y5 = lagyvalue(x5)
-    x10 = np.linspace(0,10,n2+1)
-    y10 = lagyvalue(x10)
-    x1, x2 = sp.symbols('x1,x2')
-    num1, num2, lag5, lag10 = \
-        [], [], [], []
-    ##求5次Lag基函数
-    for i in range(len(x5)):
-        num1.append(poly(x1, x5)/(x1 -x5[i]))
-        lag5.append(y5[i] *num1[i] /num1[i].subs({x1:x5[i]}))
-    ##求10次Lag基函数
-    for i in range(len(x10)):
-        num2.append(poly(x2, x10)/(x2 -x10[i]))
-        lag10.append(y10[i] *num2[i] /num2[i].subs({x2:x10[i]}))
-    global L5, L10
-    L5 = sp.simplify(sum(lag5))
-    L10 = sp.simplify(sum(lag10))
-    return (str(L5), str(L10))
+    xlin = np.linspace(0,10,n+1)
+    ylin = lagyvalue(xlin)
+    x = sp.symbols('x')
+    res = 0
+    ##求Lag基函数
+    for i in range(len(xlin)):
+        num1 = poly(x, xlin)/(x -xlin[i])
+        res += ylin[i] *num1 /num1.subs({x:xlin[i]})
+    res = sp.simplify(res)
+    return str(res),res
 
 if __name__ == '__main__':
-    Lag()
-    print(sp.latex(L5),'\n',sp.latex(L10))
-    print(L5,'\n',L10)
+    lag5 = Lag(n1)[1]
+    lag10 = Lag(n2)[1]    
+    print(sp.latex(lag5),'\n',sp.latex(lag10))
+    print(lag5,'\n',lag10)
