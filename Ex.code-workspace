@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "aiAssi",
+			"path": "../../aiAssi"
+		}
+	],
+	"settings": {}
+}
